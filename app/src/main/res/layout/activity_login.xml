@@ -35,13 +35,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Entrar" />
+        android:text="Entrar"
+        android:background="@drawable/button_arredondado" />
 
     <Button
         android:id="@+id/btnCadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Cadastrar" />
+        android:text="Cadastrar"
+        android:background="@drawable/button_arredondado" />
 
 </LinearLayout>
