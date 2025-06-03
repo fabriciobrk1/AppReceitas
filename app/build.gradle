@@ -33,6 +33,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.1' // Versão estável para API 27
     implementation 'com.google.android.material:material:1.6.1' // Ajuste compatível
+    implementation 'com.google.code.gson:gson:2.10.1' // Usando o Gson para salvar as receitas
+
 
 
     testImplementation 'junit:junit:4.13.2'

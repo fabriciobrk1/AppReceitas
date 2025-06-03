@@ -1,6 +1,5 @@
 package com.example.appreceitas;
 
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +34,7 @@ public class ReceitaAdapter extends RecyclerView.Adapter<ReceitaAdapter.ViewHold
         Receita receita = listaReceitas.get(position);
         holder.tvNomeReceita.setText(receita.getNome());
         holder.tvIngredientesReceita.setText(receita.getIngredientes());
+        // Se quiser exibir o modo de preparo, pode adicionar um TextView no layout e ativar aqui
 
         holder.itemView.setOnClickListener(v -> listener.onItemClick(receita));
     }
@@ -42,6 +42,12 @@ public class ReceitaAdapter extends RecyclerView.Adapter<ReceitaAdapter.ViewHold
     @Override
     public int getItemCount() {
         return listaReceitas.size();
+    }
+
+    // ✅ Método para atualizar a lista ao voltar da tela de cadastro
+    public void updateLista(List<Receita> novaLista) {
+        this.listaReceitas = novaLista;
+        notifyDataSetChanged();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

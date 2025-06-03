@@ -1,85 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:padding="16dp">
 
     <!-- Nome da Receita -->
+
+    <!-- Título Ingredientes -->
+
+    <!-- Lista de Ingredientes -->
+
+    <!-- Título Modo de Preparo -->
+
+    <!-- Texto do Modo de Preparo -->
+
+    <!-- Botão Voltar -->
+
     <TextView
         android:id="@+id/tvNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="111dp"
         android:text="Nome da Receita"
+        android:textColor="#FBFBFB"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#FBFBFB"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Título Ingredientes -->
     <TextView
         android:id="@+id/tvTituloIngredientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="233dp"
         android:text="Ingredientes:"
+        android:textColor="#F8F7F7"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#F8F7F7"
-        android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@id/tvNome"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Lista de Ingredientes -->
     <TextView
         android:id="@+id/tvIngredientes"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="16dp"
         android:text="Lista de ingredientes..."
-        android:textSize="16sp"
         android:textColor="#F8F7F7"
-        android:layout_marginTop="4dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTituloIngredientes"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloIngredientes" />
 
-    <!-- Título Modo de Preparo -->
     <TextView
         android:id="@+id/tvTituloModoPreparo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="67dp"
         android:text="Modo de Preparo:"
+        android:textColor="#F8F7F7"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#F8F7F7"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvIngredientes"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngredientes" />
 
-    <!-- Texto do Modo de Preparo -->
     <TextView
         android:id="@+id/tvModoPreparo"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
         android:text="Etapas do preparo..."
-        android:textSize="16sp"
         android:textColor="#F8F7F7"
-        android:layout_marginTop="4dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTituloModoPreparo"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloModoPreparo" />
 
-    <!-- Botão Voltar -->
     <Button
         android:id="@+id/btnVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Voltar"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="132dp"
         android:background="@drawable/button_arredondado"
         android:padding="12dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvModoPreparo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:text="Voltar"
+        app:layout_constraintEnd_toEndOf="@+id/tvModoPreparo"
+        app:layout_constraintTop_toBottomOf="@+id/tvModoPreparo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
