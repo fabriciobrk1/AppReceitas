@@ -2,6 +2,8 @@ package com.example.appreceitas;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DetalhesReceitaActivity extends AppCompatActivity {
@@ -12,6 +14,9 @@ public class DetalhesReceitaActivity extends AppCompatActivity {
 
         TextView tvNome = findViewById(R.id.tvNome);
         TextView tvIngredientes = findViewById(R.id.tvIngredientes);
+
+        Button btnVoltar = findViewById(R.id.btnVoltar);
+        btnVoltar.setOnClickListener(v -> finish());
 
         String nome = getIntent().getStringExtra("nome");
         String ingredientes = getIntent().getStringExtra("ingredientes");

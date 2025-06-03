@@ -2,6 +2,7 @@ package com.example.appreceitas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +40,7 @@ public class ListaReceitasActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
-        FloatingActionButton fab = findViewById(R.id.fabAdicionarReceita);
+        FloatingActionButton fab = findViewById(R.id.AdicionarReceita);
         fab.setOnClickListener(v -> {
             Intent intent = new Intent(ListaReceitasActivity.this, NovaReceitaActivity.class);
             startActivity(intent);
