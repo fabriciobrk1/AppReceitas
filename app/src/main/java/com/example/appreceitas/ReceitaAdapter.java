@@ -15,6 +15,7 @@ public class ReceitaAdapter extends RecyclerView.Adapter<ReceitaAdapter.ViewHold
 
     public interface OnItemClickListener {
         void onItemClick(Receita receita);
+        void onItemEdit(Receita receita, int position); // 👈 Adicionado para editar
     }
 
     public ReceitaAdapter(List<Receita> listaReceitas, OnItemClickListener listener) {
@@ -34,9 +35,14 @@ public class ReceitaAdapter extends RecyclerView.Adapter<ReceitaAdapter.ViewHold
         Receita receita = listaReceitas.get(position);
         holder.tvNomeReceita.setText(receita.getNome());
         holder.tvIngredientesReceita.setText(receita.getIngredientes());
-        // Se quiser exibir o modo de preparo, pode adicionar um TextView no layout e ativar aqui
 
         holder.itemView.setOnClickListener(v -> listener.onItemClick(receita));
+
+        // 👇 Clique longo para editar a receita
+        holder.itemView.setOnLongClickListener(v -> {
+            listener.onItemEdit(receita, position);
+            return true;
+        });
     }
 
     @Override
@@ -44,7 +50,6 @@ public class ReceitaAdapter extends RecyclerView.Adapter<ReceitaAdapter.ViewHold
         return listaReceitas.size();
     }
 
-    // ✅ Método para atualizar a lista ao voltar da tela de cadastro
     public void updateLista(List<Receita> novaLista) {
         this.listaReceitas = novaLista;
         notifyDataSetChanged();
